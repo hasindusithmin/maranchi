@@ -6,9 +6,7 @@ import validator from "validator"
 export default function Update() {
     const router = useRouter();
     const [Id, setId] = useState(false)
-    const [err, setErr] = useState(null)
 
-    const [createAt, setCreateAt] = useState(null)
     const [vendor, setVendor] = useState(null)
     const [item, setItem] = useState(null)
     const [quantity, setQuantity] = useState(null)
@@ -36,7 +34,7 @@ export default function Update() {
                     else throw Error(data['error'])
                 })
                 .catch(error => {
-                    setErr(err.message)
+                    setNotification(error.message)
                 })
         }
     }, [])
@@ -73,7 +71,7 @@ export default function Update() {
             }
             else {
                 setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
-                setNotification(data['message'])
+                setNotification(message)
             }
         } catch (error) {
             console.log();

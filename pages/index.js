@@ -62,7 +62,9 @@ export default function Home() {
                     <td className="w3-center">
                       <Link href={`/update/${id}`}><AiFillEdit /></Link>
                     </td>
-                    <td className="w3-center"><RiDeleteBin2Fill /></td>
+                    <td className="w3-center">
+                      <Link href={`/delete/${id}`}><RiDeleteBin2Fill /></Link>
+                    </td>
                   </tr>
                 )
               }
