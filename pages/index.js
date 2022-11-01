@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { RiDeleteBin2Fill } from "react-icons/ri"
-import { AiFillEdit } from "react-icons/ai"
+import { FiEdit } from "react-icons/fi"
 import {GrChapterAdd} from "react-icons/gr"
 import Head from "next/head"
 import Link from "next/link"
@@ -60,10 +60,10 @@ export default function Home() {
                       <td>{quantity}</td>
                       <td>{unit_price}</td>
                       <td>{total_cost}</td>
-                      <td className="w3-center">
-                        <Link href={`/update/${id}`}><AiFillEdit /></Link>
+                      <td className="w3-center" title="Edit">
+                        <Link href={`/update/${id}`}><FiEdit /></Link>
                       </td>
-                      <td className="w3-center">
+                      <td className="w3-center" title="Delete">
                         <Link href={`/delete/${id}`}><RiDeleteBin2Fill /></Link>
                       </td>
                     </tr>
@@ -71,7 +71,7 @@ export default function Home() {
                 }
               </tbody>
             </table>
-            <Link href="/create" className="w3-button w3-light-gray w3-block"><GrChapterAdd /></Link>
+            <Link href="/create" className="w3-button w3-gray w3-block" title="ADD"><GrChapterAdd /></Link>
           </>
 
         }

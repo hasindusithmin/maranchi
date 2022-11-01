@@ -19,37 +19,41 @@ export default function Create() {
     async function creatRow(event) {
         event.preventDefault()
         setNotification(null)
-        if (!validator.isAlpha(vendor, ["en-US"], { ignore: " .-," })) throw Error("check if the vendor contains only letters (a-zA-Z0-9).")
-        if (!validator.isAlphanumeric(item, ["en-US"], { ignore: " .-," })) throw Error("check if the item contains only letters (a-zA-Z0-9).")
-        const row = {
-            vendor,
-            date: new Date().toDateString(),
-            item,
-            quantity: parseInt(quantity),
-            unit_price: parseInt(unitPrice),
-            total_cost: parseInt(totalCost)
-        };
-        const res = await fetch('/api/createOne', {
-            method: 'POST',
-            mode: 'same-origin',
-            cache: 'no-cache',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(row)
-        })
-        const data = await res.json();
-        const message = data['message'];
-        if (res.status === 201) {
-            setClassName('w3-panel w3-leftbar w3-pale-green w3-large w3-serif')
-            setNotification(message)
-            setTimeout(() => { router.replace('/') }, 1500)
-        }
-        else {
+        try {
+            if (!validator.isAlpha(vendor, ["en-US"], { ignore: " .-," })) throw Error("check if the vendor contains only letters (a-zA-Z0-9).")
+            if (!validator.isAlphanumeric(item, ["en-US"], { ignore: " .-," })) throw Error("check if the item contains only letters (a-zA-Z0-9).")
+            const row = {
+                vendor,
+                date: new Date().toDateString(),
+                item,
+                quantity: parseInt(quantity),
+                unit_price: parseInt(unitPrice),
+                total_cost: parseInt(totalCost)
+            };
+            const res = await fetch('/api/createOne', {
+                method: 'POST',
+                mode: 'same-origin',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(row)
+            })
+            const data = await res.json();
+            const message = data['message'];
+            if (res.status === 201) {
+                setClassName('w3-panel w3-leftbar w3-pale-green w3-large w3-serif')
+                setNotification(message)
+                setTimeout(() => { router.replace('/') }, 1500)
+            }
+            else {
+                setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
+                setNotification(message)
+            }
+        } catch (error) {
             setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
-            setNotification(message)
+            setNotification(error.message)
         }
-
     }
 
 

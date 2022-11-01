@@ -74,7 +74,7 @@ export default function Update() {
                 setNotification(message)
             }
         } catch (error) {
-            console.log();
+
             setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
             setNotification(error.message)
         }
