@@ -1,0 +1,338 @@
+[
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning cable normal",
+        "Quantity": 10,
+        "Unit_Price": 160,
+        "Total_Cost": 1600
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning to type c cable white box",
+        "Quantity": 2,
+        "Unit_Price": 700,
+        "Total_Cost": 1400
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning to type c cable normal",
+        "Quantity": 1,
+        "Unit_Price": 600,
+        "Total_Cost": 600
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3.5mm original",
+        "Quantity": 3,
+        "Unit_Price": 600,
+        "Total_Cost": 1800
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3.5mm normal",
+        "Quantity": 2,
+        "Unit_Price": 350,
+        "Total_Cost": 700
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning earpods white box",
+        "Quantity": 1,
+        "Unit_Price": 700,
+        "Total_Cost": 700
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning earpods normal",
+        "Quantity": 1,
+        "Unit_Price": 650,
+        "Total_Cost": 650
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "2pin 5w adapter",
+        "Quantity": 3,
+        "Unit_Price": 400,
+        "Total_Cost": 1200
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3pin 5w adapter",
+        "Quantity": 3,
+        "Unit_Price": 600,
+        "Total_Cost": 1800
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "2 in 1 adapter + cable",
+        "Quantity": 1,
+        "Unit_Price": 490,
+        "Total_Cost": 490
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "u19 earphone",
+        "Quantity": 2,
+        "Unit_Price": 300,
+        "Total_Cost": 600
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "L29 earphone",
+        "Quantity": 1,
+        "Unit_Price": 120,
+        "Total_Cost": 120
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "joyroom s-l352",
+        "Quantity": 1,
+        "Unit_Price": 220,
+        "Total_Cost": 220
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "real me buds",
+        "Quantity": 2,
+        "Unit_Price": 300,
+        "Total_Cost": 600
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "magsafe",
+        "Quantity": 1,
+        "Unit_Price": 3500,
+        "Total_Cost": 3500
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3pin dock normal",
+        "Quantity": 3,
+        "Unit_Price": 250,
+        "Total_Cost": 750
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3.5 to lightning ",
+        "Quantity": 1,
+        "Unit_Price": 500,
+        "Total_Cost": 500
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "double lightning adapter",
+        "Quantity": 2,
+        "Unit_Price": 450,
+        "Total_Cost": 900
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning cable original",
+        "Quantity": 3,
+        "Unit_Price": 400,
+        "Total_Cost": 1200
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "20w power adapter",
+        "Quantity": 2,
+        "Unit_Price": 3500,
+        "Total_Cost": 7000
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "baseus mini white",
+        "Quantity": 2,
+        "Unit_Price": 450,
+        "Total_Cost": 900
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "baseus cafule cable",
+        "Quantity": 1,
+        "Unit_Price": 600,
+        "Total_Cost": 600
+    },
+    {
+        "Date": "2021-08-17 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "tempered glass",
+        "Quantity": 17,
+        "Unit_Price": 100,
+        "Total_Cost": 1700
+    },
+    {
+        "Date": "2021-08-21 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "magsafe",
+        "Quantity": 1,
+        "Unit_Price": 3500,
+        "Total_Cost": 3500
+    },
+    {
+        "Date": "2021-08-21 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "20w power adapter",
+        "Quantity": 1,
+        "Unit_Price": 3500,
+        "Total_Cost": 3500
+    },
+    {
+        "Date": "2021-08-21 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "double lightning adapter",
+        "Quantity": 2,
+        "Unit_Price": 450,
+        "Total_Cost": 900
+    },
+    {
+        "Date": "2021-08-21 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning earpods white box",
+        "Quantity": 4,
+        "Unit_Price": 700,
+        "Total_Cost": 2800
+    },
+    {
+        "Date": "2021-08-26 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning earpods white box",
+        "Quantity": 4,
+        "Unit_Price": 600,
+        "Total_Cost": 2400
+    },
+    {
+        "Date": "2021-08-26 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3.5mm original",
+        "Quantity": 5,
+        "Unit_Price": 700,
+        "Total_Cost": 3500
+    },
+    {
+        "Date": "2021-08-26 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "2pin 5w adapter",
+        "Quantity": 1,
+        "Unit_Price": 400,
+        "Total_Cost": 400
+    },
+    {
+        "Date": "2021-08-26 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "lightning earpods white box",
+        "Quantity": 4,
+        "Unit_Price": 600,
+        "Total_Cost": 2400
+    },
+    {
+        "Date": "2021-08-28 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "airpods pro",
+        "Quantity": 5,
+        "Unit_Price": 3900,
+        "Total_Cost": 19500
+    },
+    {
+        "Date": "2021-08-28 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "airpods 2",
+        "Quantity": 2,
+        "Unit_Price": 3000,
+        "Total_Cost": 6000
+    },
+    {
+        "Date": "2021-08-28 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "oximeters AD805",
+        "Quantity": 9,
+        "Unit_Price": 3100,
+        "Total_Cost": 27900
+    },
+    {
+        "Date": "2021-08-28 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "oximeters M190",
+        "Quantity": 4,
+        "Unit_Price": 3500,
+        "Total_Cost": 14000
+    },
+    {
+        "Date": "2021-09-04 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3.5mm original",
+        "Quantity": 5,
+        "Unit_Price": 600,
+        "Total_Cost": 3000
+    },
+    {
+        "Date": "2021-04-09 00:00:00",
+        "Vendor": "chadeeka",
+        "Item": "3pin 5w adapter",
+        "Quantity": 5,
+        "Unit_Price": 600,
+        "Total_Cost": 3000
+    },
+    {
+        "Date": "2021-08-24 00:00:00",
+        "Vendor": "AFA",
+        "Item": "airpods pro serials",
+        "Quantity": 10,
+        "Unit_Price": 3550,
+        "Total_Cost": 35500
+    },
+    {
+        "Date": "2021-08-31 00:00:00",
+        "Vendor": "katta",
+        "Item": "airpods pro no serial",
+        "Quantity": 10,
+        "Unit_Price": 3230,
+        "Total_Cost": 32300
+    },
+    {
+        "Date": "2021-05-09 00:00:00",
+        "Vendor": "baratha",
+        "Item": "lightning heaset original",
+        "Quantity": 4,
+        "Unit_Price": 2800,
+        "Total_Cost": 11200
+    },
+    {
+        "Date": "2021-08-12 00:00:00",
+        "Vendor": "nirosh",
+        "Item": "airpods pro serials",
+        "Quantity": 10,
+        "Unit_Price": 32000,
+        "Total_Cost": 320000
+    },
+    {
+        "Date": "2021-02-12 00:00:00",
+        "Vendor": "afa",
+        "Item": "2pin dock and cable",
+        "Quantity": 10,
+        "Unit_Price": 400,
+        "Total_Cost": 4000
+    }
+]
