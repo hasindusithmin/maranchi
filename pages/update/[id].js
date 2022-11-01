@@ -63,16 +63,17 @@ export default function Update() {
             body: JSON.stringify(row)
         })
         const data = await res.json();
-        const message = data['message'];
+        // const message = data['message'];
 
         if (res.status === 202) { 
             setClassName('w3-panel w3-leftbar w3-pale-green w3-large w3-serif')
-            setNotification(message)
-            setTimeout(()=>{router.replace('/')},1500)
+            // setNotification(message)
+            console.log(data);
+            // setTimeout(()=>{router.replace('/')},1500)
         }
         else {
             setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
-            setNotification(message)
+            setNotification(data['message'])
         }
 
 
