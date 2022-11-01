@@ -25,10 +25,6 @@ export default function Home() {
       <Head>
         <title>MS | Dashboard</title>
       </Head>
-      <header className="w3-center w3-margin-bottom">
-        <h1 className="w3-opacity"><b>MARANCHI SOLUTION</b></h1>
-        <p><b>Stock Dashboard</b></p>
-      </header>
       <div className="w3-responsive">
         {
           error &&
@@ -41,26 +37,28 @@ export default function Home() {
           <table className="w3-table-all">
             <thead>
               <tr className="w3-dark-gray">
-                <th>Date</th>
+                <th>createAt</th>
                 <th>Vendor</th>
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Unit Price</th>
                 <th>Total Cost</th>
+                <th>updateAt</th>
                 <th className="w3-center">Update</th>
                 <th className="w3-center">Delete</th>
               </tr>
             </thead>
             <tbody>
               {
-                stock.map(({ id, date, vendor, item, quantity, unit_price, total_cost }) =>
+                stock.map(({ id, createAt,updateAt, vendor, item, quantity, unit_price, total_cost }) =>
                   <tr key={id} id={id}>
-                    <td>{date}</td>
+                    <td>{createAt}</td>
                     <td>{vendor}</td>
                     <td>{item}</td>
                     <td>{quantity}</td>
                     <td>{unit_price}</td>
                     <td>{total_cost}</td>
+                    <td>{updateAt}</td>
                     <td className="w3-center">
                       <Link href={`/update/${id}`}><AiFillEdit /></Link>
                     </td>
