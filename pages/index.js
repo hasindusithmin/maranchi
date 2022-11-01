@@ -16,36 +16,37 @@ export default function Home() {
       <div className="w3-responsive">
         <table className="w3-table-all">
           <thead>
-            <tr>
+            <tr className="w3-dark-gray">
               <th>Date</th>
               <th>Vendor</th>
               <th>Item</th>
               <th>Quantity</th>
               <th>Unit Price</th>
               <th>Total Cost</th>
-              <th></th>
-              <th></th>
+              <th className="w3-center">Update</th>
+              <th className="w3-center">Delete</th>
             </tr>
           </thead>
           <tbody>
             {
               Maranchi &&
               stock.map(({ Date, Vendor, Item, Quantity, Unit_Price, Total_Cost }) =>
-                <tr key={Date}>
+                <tr key={Math.random()}>
                   <td>{Date}</td>
                   <td>{Vendor}</td>
                   <td>{Item}</td>
                   <td>{Quantity}</td>
                   <td>{Unit_Price}</td>
                   <td>{Total_Cost}</td>
-                  <td></td>
-                  <td></td>
+                  <td className="w3-center"><AiFillEdit /></td>
+                  <td className="w3-center"><RiDeleteBin2Fill /></td>
                 </tr>
               )
             }
           </tbody>
         </table>
       </div>
+      <div className="w3-padding"></div>
     </>
   )
 }
