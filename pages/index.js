@@ -1,11 +1,26 @@
-import { useState } from "react"
-import Maranchi from "../public/Maranchi.json"
+import { useEffect, useState } from "react"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import { AiFillEdit } from "react-icons/ai"
 import Head from "next/head"
 export default function Home() {
 
-  const [stock, setStock] = useState(Maranchi)
+  const [stock, setStock] = useState(null)
+
+
+  useEffect(() => {
+    fetch('/api/read')
+      .then(res => {
+        if (res.status === 200) return res.json()
+        // else throw res.json()
+      })
+      .then(data => {
+        setStock(data)
+      })
+      .catch(error => {
+        console.log(error.message);
+      })
+  }, [])
+
   const updRow = k => {
   }
 
@@ -38,23 +53,18 @@ export default function Home() {
           </thead>
           <tbody>
             {
-              Maranchi &&
-              stock.map(({ Date, Vendor, Item, Quantity, Unit_Price, Total_Cost }) => {
-                const key = Math.random()
-                return (
-                  <tr key={key} id={key}>
-                    <td>{Date}</td>
-                    <td>{Vendor}</td>
-                    <td>{Item}</td>
-                    <td>{Quantity}</td>
-                    <td>{Unit_Price}</td>
-                    <td>{Total_Cost}</td>
-                    <td className="w3-center" onClick={()=>{updRow(key)}}><AiFillEdit /></td>
-                    <td className="w3-center" onClick={()=>{delROw(key)}}><RiDeleteBin2Fill /></td>
-                  </tr>
-                )
-
-              }
+              stock &&
+              stock.map(({ id,date, vendor, item, quantity, unit_price, total_cost }) => 
+                <tr key={id} id={id}>
+                  <td>{date}</td>
+                  <td>{vendor}</td>
+                  <td>{item}</td>
+                  <td>{quantity}</td>
+                  <td>{unit_price}</td>
+                  <td>{total_cost}</td>
+                  <td className="w3-center" onClick={() => { updRow(id) }}><AiFillEdit /></td>
+                  <td className="w3-center" onClick={() => { delROw(id) }}><RiDeleteBin2Fill /></td>
+                </tr>
               )
             }
           </tbody>
