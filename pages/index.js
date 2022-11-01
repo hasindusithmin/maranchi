@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import { AiFillEdit } from "react-icons/ai"
 import Head from "next/head"
+import Link from "next/link"
 export default function Home() {
 
   const [stock, setStock] = useState(null)
@@ -18,13 +19,6 @@ export default function Home() {
         setError(error.message)
       })
   }, [])
-
-  const updRow = k => {
-  }
-
-  const delROw = k => {
-  }
-
 
   return (
     <>
@@ -67,8 +61,10 @@ export default function Home() {
                     <td>{quantity}</td>
                     <td>{unit_price}</td>
                     <td>{total_cost}</td>
-                    <td className="w3-center" onClick={() => { updRow(id) }}><AiFillEdit /></td>
-                    <td className="w3-center" onClick={() => { delROw(id) }}><RiDeleteBin2Fill /></td>
+                    <td className="w3-center">
+                      <Link href={`/update/${id}`}><AiFillEdit /></Link>
+                    </td>
+                    <td className="w3-center"><RiDeleteBin2Fill /></td>
                   </tr>
                 )
               }
