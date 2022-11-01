@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import validator from "validator"
+
 
 export default function Update() {
     const router = useRouter();

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import { AiFillEdit } from "react-icons/ai"
+import {GrChapterAdd} from "react-icons/gr"
 import Head from "next/head"
 import Link from "next/link"
 export default function Home() {
@@ -34,42 +35,45 @@ export default function Home() {
         }
         {
           stock &&
-          <table className="w3-table-all">
-            <thead>
-              <tr className="w3-dark-gray">
-                <th>createAt</th>
-                <th>Vendor</th>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Total Cost</th>
-                <th>updateAt</th>
-                <th className="w3-center">Update</th>
-                <th className="w3-center">Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                stock.map(({ id, createAt,updateAt, vendor, item, quantity, unit_price, total_cost }) =>
-                  <tr key={id} id={id}>
-                    <td>{createAt}</td>
-                    <td>{vendor}</td>
-                    <td>{item}</td>
-                    <td>{quantity}</td>
-                    <td>{unit_price}</td>
-                    <td>{total_cost}</td>
-                    <td>{updateAt}</td>
-                    <td className="w3-center">
-                      <Link href={`/update/${id}`}><AiFillEdit /></Link>
-                    </td>
-                    <td className="w3-center">
-                      <Link href={`/delete/${id}`}><RiDeleteBin2Fill /></Link>
-                    </td>
-                  </tr>
-                )
-              }
-            </tbody>
-          </table>
+
+          <>
+            <table className="w3-table-all">
+              <thead>
+                <tr className="w3-dark-gray">
+                  <th>Date</th>
+                  <th>Vendor</th>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Total Cost</th>
+                  <th className="w3-center">Update</th>
+                  <th className="w3-center">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  stock.map(({ id, date, vendor, item, quantity, unit_price, total_cost }) =>
+                    <tr key={id} id={id}>
+                      <td>{date}</td>
+                      <td>{vendor}</td>
+                      <td>{item}</td>
+                      <td>{quantity}</td>
+                      <td>{unit_price}</td>
+                      <td>{total_cost}</td>
+                      <td className="w3-center">
+                        <Link href={`/update/${id}`}><AiFillEdit /></Link>
+                      </td>
+                      <td className="w3-center">
+                        <Link href={`/delete/${id}`}><RiDeleteBin2Fill /></Link>
+                      </td>
+                    </tr>
+                  )
+                }
+              </tbody>
+            </table>
+            <Link href="/create" className="w3-button w3-light-gray w3-block"><GrChapterAdd /></Link>
+          </>
+
         }
       </div>
       <div className="w3-padding"></div>
