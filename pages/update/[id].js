@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import validator from "validator"
 
 export default function Update() {
     const router = useRouter();
@@ -26,8 +26,7 @@ export default function Update() {
                 .then(async (res) => {
                     const data = await res.json()
                     if (res.status === 200) {
-                        const { createAt, vendor, item, quantity, unit_price, total_cost } = data;
-                        setCreateAt(createAt)
+                        const { vendor, item, quantity, unit_price, total_cost } = data;
                         setVendor(vendor)
                         setItem(item)
                         setQuantity(quantity)
@@ -44,36 +43,42 @@ export default function Update() {
 
     async function updateRow(event) {
         event.preventDefault()
-        const row = {
-            id: parseInt(Id),
-            createAt,
-            vendor,
-            item,
-            quantity: parseInt(quantity),
-            unit_price: parseInt(unitPrice),
-            total_cost: parseInt(totalCost)
-        };
-        const res = await fetch('/api/update', {
-            method: 'POST',
-            mode: 'same-origin',
-            cache: 'no-cache',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(row)
-        })
-        const data = await res.json();
-        // const message = data['message'];
-
-        if (res.status === 202) { 
-            setClassName('w3-panel w3-leftbar w3-pale-green w3-large w3-serif')
-            // setNotification(message)
-            console.log(data);
-            // setTimeout(()=>{router.replace('/')},1500)
-        }
-        else {
+        setNotification(null)
+        try {
+            if (!validator.isAlpha(vendor,["en-US"], { ignore: " .-," })) throw Error("check if the vendor contains only letters (a-zA-Z0-9).")
+            if (!validator.isAlphanumeric(item,["en-US"], { ignore: " .-," })) throw Error("check if the item contains only letters (a-zA-Z0-9).")
+            const row = {
+                id: parseInt(Id),
+                vendor,
+                item,
+                quantity: parseInt(quantity),
+                unit_price: parseInt(unitPrice),
+                total_cost: parseInt(totalCost)
+            };
+            const res = await fetch('/api/update', {
+                method: 'POST',
+                mode: 'same-origin',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(row)
+            })
+            const data = await res.json();
+            const message  = data['message'];
+            if (res.status === 202) {
+                setClassName('w3-panel w3-leftbar w3-pale-green w3-large w3-serif')
+                setNotification(message)
+                setTimeout(()=>{router.replace('/')},1500)
+            }
+            else {
+                setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
+                setNotification(data['message'])
+            }
+        } catch (error) {
+            console.log();
             setClassName('w3-panel w3-leftbar w3-pale-red w3-large w3-serif')
-            setNotification(data['message'])
+            setNotification(error.message)
         }
 
 
