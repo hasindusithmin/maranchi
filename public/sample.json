@@ -1,0 +1,48 @@
+
+{
+  "images": {
+    
+    "background": "https://imgplaceholder.deta.dev/1240/1754/ffffff"
+  },
+  "sender": {
+    "company": "Sample Corp",
+    "address": "Sample Street 123",
+    "zip": "1234 AB",
+    "city": "Sampletown",
+    "country": "Samplecountry"
+  },
+  "client": {
+    "company": "Client Corp",
+    "address": "Clientstreet 456",
+    "zip": "4567 CD",
+    "city": "Clientcity",
+    "country": "Clientcountry"
+  },
+  "information": {
+    "number": "2022.0001",
+    "date": "1.1.2022"
+  },
+  "products": [
+    {
+      "quantity": "2",
+      "description": "Test1",
+      "tax-rate": 0,
+      "price": 33.87
+    },
+    {
+      "quantity": "4",
+      "description": "Test2",
+      "tax-rate": 0,
+      "price": 10.45
+    }
+  ],
+  "bottom-notice": "Kindly pay your invoice within 15 days.",
+  "settings": {
+    "currency": "USD",
+    "tax-notation": "vat",
+    "margin-top": 25,
+    "margin-right": 25,
+    "margin-left": 25,
+    "margin-bottom": 25
+  }
+}

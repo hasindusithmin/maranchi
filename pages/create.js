@@ -24,7 +24,7 @@ export default function Create() {
             if (!validator.isAlphanumeric(item, ["en-US"], { ignore: " .-," })) throw Error("check if the item contains only letters (a-zA-Z0-9).")
             const row = {
                 vendor,
-                date: new Date().toDateString(),
+                date: new Date().toUTCString(),
                 item,
                 quantity: parseInt(quantity),
                 unit_price: parseInt(unitPrice),

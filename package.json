@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.7",
+    "easyinvoice": "^2.3.3",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "next": "13.0.1",

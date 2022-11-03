@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import { FiEdit } from "react-icons/fi"
 import {GrChapterAdd} from "react-icons/gr"
+
 import Head from "next/head"
 import Link from "next/link"
 export default function Home() {
