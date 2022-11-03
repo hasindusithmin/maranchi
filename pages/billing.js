@@ -10,6 +10,7 @@ export default function Billing() {
 
 
     const [stock, setStock] = useState(null);
+    const [items,setItems] = useState(null);
     const [width, setWidth] = useState(null)
 
     const [id, setId] = useState(null);
@@ -99,6 +100,7 @@ export default function Billing() {
                 if (res.ok) {
                     setStock(data.filter(dt => dt['quantity'] !== 0))
                     confAutoComplete(data.map(dt => dt['item']))
+                    setItems(data.map(dt => dt['item']))
                     if (window.navigator.userAgentData.mobile) setWidth('270px')
                     else setWidth('370px')
                 }
@@ -111,14 +113,15 @@ export default function Billing() {
 
     function handler1(event) {
         try {
-            const item = event.target.value;
-            const obj = stock.filter(obj => obj['item'] == item)[0]
+            const _ = event.target.value;
+            const obj = stock.filter(obj => obj['item'] === _)[0]
             setId(obj['id'])
             setItem(obj['item'])
             setUnit(parseInt(obj['quantity']))
             setPrice(parseInt(obj['unit_price']))
         } catch (error) {
-            console.log(error.message);
+            setId(null)
+            alert(`${event.target.value} Not Found`)
         }
     }
 
@@ -134,11 +137,8 @@ export default function Billing() {
 
     function add() {
         try {
-            if (purchase.length === 0) throw Error("No item added")
+            if (id === null) throw Error("Empty")
             if (unit < qty) throw Error('Insufficient')
-            let st = subTotal;
-            st += total;
-            setSubTotal(st);
 
             if (!purItem.includes(item)) purItem.push(item)
             else throw Error("Already added")
@@ -146,6 +146,10 @@ export default function Billing() {
             const _ = purchase;
             _.push({ id, item, qty, price, total })
             setPurchase(_)
+
+            let st = subTotal;
+            st += total;
+            setSubTotal(st);
 
             document.getElementById('item').value = ''
             document.getElementById('qty').value = ''
